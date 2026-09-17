@@ -27,7 +27,7 @@ cp .env.example .env
 npm run dev
 ```
 
-浏览器打开 http://localhost:3000，上传 PDF 后提问。后端默认监听 127.0.0.1:5001。修改后端端口时，同步设置前端 `REACT_APP_API_URL`；修改前端地址时，同步设置后端 `FRONTEND_ORIGIN`。前端环境变量修改后需要重启开发服务器或重新构建。
+浏览器打开 [http://localhost:3000](http://localhost:3000)，上传 PDF 后提问。后端默认监听 127.0.0.1:5001。修改后端端口时，同步设置前端 `REACT_APP_API_URL`；修改前端地址时，同步设置后端 `FRONTEND_ORIGIN`。前端环境变量修改后需要重启开发服务器或重新构建。
 
 Chat Mode 中点击录音开始说话，识别结束后自动提交；文档答案播报完成后继续录音。关闭 Chat Mode 会停止识别和播报。语音能力取决于浏览器、音色和麦克风权限，建议使用支持 Web Speech API 的浏览器。没有语音支持时仍可使用文字输入。
 
@@ -71,7 +71,7 @@ CI=true npm run build
 ALLOW_LIVE_API_TESTS=1 npm run test:live --prefix server
 ```
 
-此命令需要有效密钥并产生少量 API 费用。测试方法和修复范围见 [docs/verification.md](docs/verification.md)。GitHub Actions 会在 push 和 pull request 时运行不需要密钥的测试及构建；首次发布后才能确认云端任务状态。
+此命令需要有效密钥并产生少量 API 费用。测试方法和修复范围见 [docs/verification.md](docs/verification.md)。GitHub Actions 会在 push 和 pull request 时运行不需要密钥的测试及构建；最新结果见 [Tests and build](https://github.com/ZLI2038/rag-mcp-pdf-qa/actions/workflows/ci.yml)。
 
 ## 上传 GitHub
 
